@@ -2,7 +2,7 @@
 Circular Carousel using vanilla javascript. 
 Very Light weight and size is ~2.5KB. No dependencies.
 Compatible with all javascript frameworks like Mithril JS, React JS, Angular JS etc.
-requestAnimationFrame() is used for carousel animation. Optimized for browser paint time.
+requestAnimationFrame() is used for carousel animation. Optimized for browser paint time. Improves page load time.
 
 Require the minified js.
 
