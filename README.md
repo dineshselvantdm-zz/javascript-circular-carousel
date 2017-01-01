@@ -10,9 +10,9 @@ HTML:
 <div id = "lite-carousel">
   <ul>
     <div id="prev">Prev</div>
-    <li>
-    <li>
-    <li>
+    <li>Item1</li>
+    <li>Item2</li>
+    <li>Item3</li>
     <div id="next">Next</div>
   <ul>
 </div>
