@@ -20,7 +20,7 @@ HTML:
 Usage in JS: 
 
 For Left Click:-
-document.getElementByID('prev').addEventListener("click",function(){
+document.getElementById('prev').addEventListener("click",function(){
   var delay = 500;  //Animation slide time in milliseconds
   var ul_selector = '#lite-carousel ul';  //Pass the ul selector as input 
   var position = 'Left';
@@ -28,7 +28,7 @@ document.getElementByID('prev').addEventListener("click",function(){
 });
 
 For Right Click:-
-document.getElementByID('next').addEventListener("click",function(){
+document.getElementById('next').addEventListener("click",function(){
   var delay = 500;  //Animation slide time in milliseconds
   var ul_selector = '#lite-carousel ul';  //Pass the ul selector as input 
   var position = 'Right';
