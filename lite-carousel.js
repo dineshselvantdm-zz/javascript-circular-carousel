@@ -1,4 +1,4 @@
-ar CircularCarousel = {   
+var CircularCarousel = {   
 	start_time : 0,
 	list_obj : {},
 	position : "Right",
@@ -68,17 +68,4 @@ ar CircularCarousel = {
 			if(position == 'Right'){
 				var li = CircularCarousel.cloneListNode(li_array[0]);
 				frag.appendChild(li);
-				for(var i=1;i<li_array.length;i++){
-					frag.appendChild(li_array[i]);
-				}
-				frag.appendChild(li_array[0]);
-			}
-			document.querySelector(selector).innerHTML = "";
-			document.querySelector(selector).appendChild(frag);
-			if(position == 'Left'){
-				document.querySelector(selector + ' li:first-child').style.marginLeft = (CircularCarousel.computed_width*-1).toString() + "px";
-			}
-			requestAnimationFrame(CircularCarousel.animateCarousel);
-		}	
-	}	
-}
+				
