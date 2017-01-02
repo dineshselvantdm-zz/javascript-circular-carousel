@@ -82,4 +82,3 @@ var CircularCarousel = {
 		}	
 	}	
 }
-module.exports = CircularCarousel;
