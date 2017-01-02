@@ -2,12 +2,13 @@
 <html>
   <head>
     <style>
+      body{text-align: center;}
       img { width: 200px;height: 100px;}
       span { position: absolute; top: 39px; left: 81px;}
       ul{width: 300%; position: absolute; padding: 0px;}
       div.viewport{ overflow: hidden; width: 203px; height: 117px; position: relative; margin-left: 15px;}
       li { list-style: none; position: relative;float: left;margin-left: 3px;}
-      div#lite-carousel {overflow: hidden; position: relative;}
+      div#lite-carousel {overflow: hidden; position: relative;margin-left: 39%;}
       div#prev {position: absolute;cursor: pointer; top: 54px;font-weight: bold;}
       div#next {position: absolute; cursor: pointer; left: 226px; top: 54px;font-weight: bold;}
     </style>  
@@ -25,6 +26,9 @@
       </div>  
       <div id="next">></div>
     </div>
+    <div>
+      <p>Circular Carousel using vanilla javascript. Very Light weight and size is ~2KB. No dependencies. Compatible with all javascript frameworks like Mithril JS, React JS, Angular JS etc. For other jQuery carousels, animate() function is used, which internally uses setInterval() for animation. This reduces the browser paint performance. In lite-carousel,requestAnimationFrame() is used for carousel animation. Optimized for browser paint time. Improves page load time.</p>
+    </div>  
     <script>
       //Minified Carousel code https://github.com/dineshselvantdm/javascript-circular-carousel/blob/master/lite-carousel.min.js
       var CircularCarousel={start_time:0,list_obj:{},position:"Right",delay:500,width:20,margin_left:-3,computed_width:23,init:function(r,e,i){CircularCarousel.position=r,CircularCarousel.delay=i;var l=document.querySelectorAll(e+" li");CircularCarousel.width=l[0].offsetWidth,CircularCarousel.computed_width=CircularCarousel.width-CircularCarousel.margin_left,CircularCarousel.list_obj={li_array:l,selector:e}},animateCarousel:function(r){CircularCarousel.start_time||(CircularCarousel.start_time=r);var e=(CircularCarousel.list_obj.li_array,CircularCarousel.list_obj.selector),i=r-CircularCarousel.start_time;if("Left"==CircularCarousel.position){var l=Math.max(CircularCarousel.computed_width-i*CircularCarousel.computed_width/CircularCarousel.delay,CircularCarousel.margin_left);if(document.querySelector(e+" li:first-child").style.marginLeft=(-1*l).toString()+"px",l==CircularCarousel.margin_left)return f_child=document.querySelector(e+" li:last-child"),f_child.parentNode.removeChild(f_child),void(CircularCarousel.start_time=0)}else if("Right"==CircularCarousel.position){var l=Math.min(i*CircularCarousel.computed_width/CircularCarousel.delay,CircularCarousel.computed_width);if(document.querySelector(e+" li:first-child").style.marginLeft=(-1*l).toString()+"px",l==CircularCarousel.computed_width)return f_child=document.querySelector(e+" li:first-child"),f_child.parentNode.removeChild(f_child),void(CircularCarousel.start_time=0)}i<=CircularCarousel.delay+20?requestAnimationFrame(CircularCarousel.animateCarousel):CircularCarousel.start_time=0},cloneListNode:function(r){var e=document.createElement("li");return e.innerHTML=r.innerHTML,e.classList=r.classList,e},shiftCarousel:function(r,e,i){if(!CircularCarousel.start_time){CircularCarousel.init(r,e,i);var l=document.createDocumentFragment(),a=CircularCarousel.list_obj.li_array,t=CircularCarousel.list_obj.selector;if("Left"==r){var u=a.length;l.appendChild(a[u-1]);for(var o=0;u-1>o;o++)l.appendChild(a[o]);var c=CircularCarousel.cloneListNode(a[u-1]);l.appendChild(c)}if("Right"==r){var c=CircularCarousel.cloneListNode(a[0]);l.appendChild(c);for(var o=1;o<a.length;o++)l.appendChild(a[o]);l.appendChild(a[0])}document.querySelector(t).innerHTML="",document.querySelector(t).appendChild(l),"Left"==r&&(document.querySelector(t+" li:first-child").style.marginLeft=(-1*CircularCarousel.computed_width).toString()+"px"),requestAnimationFrame(CircularCarousel.animateCarousel)}}};
