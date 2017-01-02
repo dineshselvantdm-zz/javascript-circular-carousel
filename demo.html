@@ -4,7 +4,9 @@
     <style>
       img { width: 200px;height: 100px;}
       span { position: absolute; top: 39px; left: 81px;}
-      li { list-style: none; position: relative;}
+      ul{width: 300%; position: absolute}
+      div.viewport{ overflow: hidden; width: 243px; height: 117px; position: relative;}
+      li { list-style: none; position: relative;float: left;}
       div#lite-carousel {overflow: hidden; position: relative;}
       div#prev {position: absolute;cursor: pointer; top: 54px;}
       div#next {position: absolute; cursor: pointer; left: 275px; top: 54px;}
@@ -16,11 +18,13 @@
     </h1>  
     <div id = "lite-carousel">
       <div id="prev"><</div>
-      <ul>       
-        <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP89f3bfwAJwgPoVq37eAAAAABJRU5ErkJggg=="><span>Item1</span></li>
-        <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP89f3bfwAJwgPoVq37eAAAAABJRU5ErkJggg=="><span>Item2</span></li>
-        <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP89f3bfwAJwgPoVq37eAAAAABJRU5ErkJggg=="><span>Item3</span></li>  
-      </ul>
+      <div class="viewport">  
+        <ul>       
+          <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP89f3bfwAJwgPoVq37eAAAAABJRU5ErkJggg=="><span>Item1</span></li>
+          <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP89f3bfwAJwgPoVq37eAAAAABJRU5ErkJggg=="><span>Item2</span></li>
+          <li><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP89f3bfwAJwgPoVq37eAAAAABJRU5ErkJggg=="><span>Item3</span></li>  
+        </ul>
+      </div>  
       <div id="next">></div>
     </div>
     <script>
