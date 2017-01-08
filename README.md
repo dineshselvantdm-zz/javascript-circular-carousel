@@ -9,6 +9,7 @@ Circular Carousel using vanilla javascript.
         <li>In lite-carousel,requestAnimationFrame() is used for carousel animation. Optimized for browser paint time.</li>
         <li>Improves page load time due to less size.</li>
         <li>Viewport CSS can be customized to show any number of images on load.</li>
+        <li><a href="http://caniuse.com/#feat=requestanimationframe">Check</a>Browser Support</li>
 </ul>
 <a href="http://htmlpreview.github.io/?https://github.com/dineshselvantdm/javascript-circular-carousel/blob/master/demo.html">Check the Demo.</a>
 Require the minified js.
