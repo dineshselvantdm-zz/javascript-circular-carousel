@@ -2,7 +2,7 @@
 Circular Carousel using vanilla javascript. 
 <ul>
         <li>Circular Carousel using vanilla javascript</li>
-        <li>Very Light weight and size is ~2KB.</li>
+        <li>Very Light weight and size is ~750 Bytes minified and gzipped version.</li>
         <li>No dependencies.</li>
         <li>Compatible with all javascript frameworks like Mithril JS, React JS, Angular JS etc.</li>
         <li>In jQuery carousels, animate() function is used, which internally uses setInterval() for animation. That impacts the browser paint performance. <a href="https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/">Know more</a> </li>
